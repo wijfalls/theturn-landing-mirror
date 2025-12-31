@@ -1,0 +1,552 @@
+/* ==========================================================================
+   The Turn At - Landing Page Styles
+   Brand Colors & Custom Overrides for Bootstrap 5
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties (Design Tokens)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Colors */
+  --turn-green-dark: #1a2e1a;
+  --turn-green-mid: #2d4a2d;
+  --turn-green-accent: #3d5a3d;
+  --turn-green-light: #4a6b4a;
+
+  /* Backgrounds */
+  --turn-bg-warm: #f5f5f0;
+  --turn-bg-cream: #faf9f6;
+  --turn-bg-light-green: #e8ede8;
+
+  /* Text */
+  --turn-text-dark: #1a1a1a;
+  --turn-text-muted: #5a5a5a;
+  --turn-text-light: #ffffff;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --section-padding: 6rem;
+  --section-padding-mobile: 3rem;
+}
+
+/* --------------------------------------------------------------------------
+   Base Styles
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--turn-text-dark);
+  background-color: var(--turn-bg-warm);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------
+   Navigation
+   -------------------------------------------------------------------------- */
+.navbar-turn {
+  background-color: var(--turn-bg-warm);
+  padding: 1rem 0;
+}
+
+.navbar-turn .navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--turn-green-dark);
+  font-size: 1.5rem;
+}
+
+.navbar-turn .navbar-brand:hover {
+  color: var(--turn-green-mid);
+}
+
+.navbar-turn .nav-logo {
+  height: 40px;
+  width: auto;
+}
+
+.btn-signup {
+  background-color: var(--turn-green-dark);
+  color: var(--turn-text-light);
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+  background-color: var(--turn-green-mid);
+  color: var(--turn-text-light);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  background-color: var(--turn-bg-warm);
+  padding: var(--section-padding) 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-headline {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--turn-green-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-subtext {
+  font-size: 1.125rem;
+  color: var(--turn-text-muted);
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+.btn-cta {
+  background-color: var(--turn-green-dark);
+  color: var(--turn-text-light);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--turn-green-mid);
+  color: var(--turn-text-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(26, 46, 26, 0.2);
+}
+
+.hero-phone-mockup {
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 25px 80px rgba(26, 46, 26, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Contractor Profile Card Section
+   -------------------------------------------------------------------------- */
+.profile-section {
+  background-color: var(--turn-bg-cream);
+  padding: var(--section-padding) 0;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--turn-green-accent);
+  margin-bottom: 1rem;
+}
+
+.profile-headline {
+  font-size: 2.5rem;
+  color: var(--turn-green-dark);
+  margin-bottom: 1rem;
+}
+
+.profile-description {
+  font-size: 1.125rem;
+  color: var(--turn-text-muted);
+  max-width: 500px;
+}
+
+.profile-card-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(26, 46, 26, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   Social Proof Section
+   -------------------------------------------------------------------------- */
+.social-proof-section {
+  background-color: var(--turn-green-dark);
+  padding: var(--section-padding) 0;
+  color: var(--turn-text-light);
+}
+
+.social-proof-headline {
+  font-size: 2.5rem;
+  color: var(--turn-text-light);
+  margin-bottom: 1rem;
+}
+
+.social-proof-subtext {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.proof-card {
+  background-color: var(--turn-green-mid);
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.proof-card:hover {
+  transform: translateY(-5px);
+}
+
+.proof-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--turn-text-light);
+  margin-bottom: 0.75rem;
+}
+
+.proof-card-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Resident/Contractor Split Section
+   -------------------------------------------------------------------------- */
+.split-section {
+  background-color: var(--turn-bg-light-green);
+  padding: var(--section-padding) 0;
+}
+
+.split-headline {
+  font-size: 2.5rem;
+  color: var(--turn-green-dark);
+  margin-bottom: 1rem;
+}
+
+.split-subtext {
+  font-size: 1.125rem;
+  color: var(--turn-text-muted);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.split-card {
+  background-color: var(--turn-bg-cream);
+  border-radius: 16px;
+  padding: 2.5rem;
+  height: 100%;
+  border: 1px solid rgba(26, 46, 26, 0.1);
+  transition: all 0.3s ease;
+}
+
+.split-card:hover {
+  box-shadow: 0 15px 40px rgba(26, 46, 26, 0.1);
+  transform: translateY(-5px);
+}
+
+.split-card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+  color: var(--turn-green-dark);
+}
+
+.split-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--turn-green-dark);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.split-card-text {
+  font-size: 0.95rem;
+  color: var(--turn-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.btn-split-primary {
+  background-color: var(--turn-green-dark);
+  color: var(--turn-text-light);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-split-primary:hover {
+  background-color: var(--turn-green-mid);
+  color: var(--turn-text-light);
+}
+
+.btn-split-secondary {
+  background-color: transparent;
+  color: var(--turn-green-dark);
+  border: 2px solid var(--turn-green-dark);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-split-secondary:hover {
+  background-color: var(--turn-green-dark);
+  color: var(--turn-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer-section {
+  background-color: var(--turn-bg-cream);
+  padding: var(--section-padding) 0 2rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--turn-green-dark);
+  margin-bottom: 3rem;
+}
+
+.footer-heading {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--turn-green-dark);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--turn-text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--turn-green-dark);
+}
+
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(26, 46, 26, 0.1);
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+}
+
+.footer-copyright {
+  font-size: 0.875rem;
+  color: var(--turn-text-muted);
+  margin-top: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .hero-section {
+    padding: var(--section-padding-mobile) 0;
+    min-height: auto;
+  }
+
+  .hero-phone-mockup {
+    margin-top: 3rem;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .profile-section,
+  .social-proof-section,
+  .split-section,
+  .footer-section {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .social-proof-headline,
+  .split-headline,
+  .profile-headline {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-headline {
+    font-size: 2rem;
+  }
+
+  .hero-phone-mockup {
+    max-width: 80%;
+  }
+
+  .proof-card {
+    margin-bottom: 1rem;
+  }
+
+  .split-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-column {
+    margin-bottom: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Early Access Modal
+   -------------------------------------------------------------------------- */
+.modal-content {
+  border: none;
+  border-radius: 16px;
+  background-color: var(--turn-bg-cream);
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--turn-green-dark);
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  color: var(--turn-text-muted);
+}
+
+.modal .form-label {
+  font-weight: 500;
+  color: var(--turn-text-dark);
+  font-size: 0.9rem;
+}
+
+.modal .form-control {
+  border: 2px solid rgba(26, 46, 26, 0.15);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal .form-control:focus {
+  border-color: var(--turn-green-dark);
+  box-shadow: 0 0 0 3px rgba(26, 46, 26, 0.1);
+}
+
+.modal .form-control::placeholder {
+  color: #aaa;
+}
+
+.modal .form-text {
+  font-size: 0.8rem;
+  color: var(--turn-text-muted);
+}
+
+/* User Type Toggle Buttons */
+.btn-outline-turn {
+  color: var(--turn-green-dark);
+  border: 2px solid rgba(26, 46, 26, 0.2);
+  background-color: transparent;
+  font-weight: 500;
+  padding: 0.65rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-turn:hover {
+  background-color: rgba(26, 46, 26, 0.05);
+  border-color: var(--turn-green-dark);
+  color: var(--turn-green-dark);
+}
+
+.btn-check:checked+.btn-outline-turn {
+  background-color: var(--turn-green-dark);
+  border-color: var(--turn-green-dark);
+  color: var(--turn-text-light);
+}
+
+.btn-check:focus+.btn-outline-turn {
+  box-shadow: 0 0 0 3px rgba(26, 46, 26, 0.15);
+}
+
+/* Success/Error Icons */
+.success-icon {
+  font-size: 4rem;
+  color: var(--turn-green-dark);
+}
+
+.error-icon {
+  font-size: 4rem;
+  color: #c44;
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  background-color: var(--turn-green-dark);
+}
+
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   Utility Classes
+   -------------------------------------------------------------------------- */
+.text-turn-green {
+  color: var(--turn-green-dark);
+}
+
+.bg-turn-green {
+  background-color: var(--turn-green-dark);
+}
+
+.bg-turn-warm {
+  background-color: var(--turn-bg-warm);
+}
